@@ -1,0 +1,237 @@
+.settings-view .package-card {
+  padding: 15px;
+  margin-bottom: 10px;
+  list-style-type: none;
+  font-size: 1.2em;
+  border-radius: 6px;
+  border: 1px solid #181a1f;
+  background-color: #333842;
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-user-select: none;
+}
+.settings-view .package-card:hover {
+  background-color: #373d48;
+}
+.settings-view .package-card:active {
+  background-color: #333842;
+}
+.settings-view .package-card.disabled {
+  background-color: #2c313a;
+}
+.settings-view .package-card.disabled .body,
+.settings-view .package-card.disabled .avatar,
+.settings-view .package-card.disabled .author,
+.settings-view .package-card.disabled .stats {
+  opacity: .5;
+}
+.settings-view .package-card.deprecated {
+  background-color: #2c313a;
+}
+.settings-view .package-card.deprecated .avatar,
+.settings-view .package-card.deprecated .author,
+.settings-view .package-card.deprecated .stats {
+  opacity: .5;
+}
+.settings-view .package-card .deprecation-badge {
+  display: none;
+  font-size: .75em;
+  text-transform: uppercase;
+}
+.settings-view .package-card.deprecated .deprecation-badge {
+  display: inline;
+}
+.settings-view .package-card.col-lg-4 {
+  min-width: 190px;
+  padding: 10px 0;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.settings-view .package-card .thumbnail {
+  border-radius: 3px;
+  margin: 0;
+  min-height: 140px;
+  color: #9da5b4;
+  border-radius: 6px;
+  border: 1px solid #181a1f;
+  background-color: #333842;
+}
+.settings-view .package-card .thumbnail .caption {
+  width: 100%;
+  position: relative;
+}
+.settings-view .package-card .package-name {
+  font-weight: bolder;
+  color: #d7dae0;
+}
+.settings-view .package-card .package-version {
+  font-size: 0.8em;
+}
+.settings-view .package-card .description {
+  color: #9da5b4;
+  overflow: hidden;
+  min-height: 38px;
+  max-height: 38px;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  /* number of lines to show */
+  -webkit-box-orient: vertical;
+}
+.settings-view .package-card .package-message p:last-child {
+  margin: 0;
+}
+.settings-view .package-card .downloads {
+  color: #d7dae0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  /* number of lines to show */
+  -webkit-box-orient: vertical;
+}
+.settings-view .package-card .package-status {
+  right: 0px;
+  top: 5px;
+  text-align: center;
+}
+.settings-view .package-card .package-status.icon-cloud-download {
+  color: #428bca;
+}
+.settings-view .package-card .package-status.icon-check {
+  color: #6CC644;
+}
+.settings-view .package-card .package-status.icon-alert {
+  color: #BD2C00;
+}
+.settings-view .package-card .card-name {
+  font-weight: 300;
+  margin: 0 0 .2em 0;
+  font-size: 1.2em;
+  line-height: 1.4;
+}
+.settings-view .package-card .card-name .css-truncate-target {
+  color: $greenDark;
+}
+.settings-view .package-card .stats .stats-item {
+  margin-left: 15px;
+  height: 26px;
+  display: inline-block;
+  line-height: 24px;
+  vertical-align: top;
+}
+.settings-view .package-card .stats .stats-item .icon {
+  color: rgba(157, 165, 180, 0.6);
+}
+.settings-view .package-card .stats .star-box {
+  display: inline-block;
+  vertical-align: top;
+}
+.settings-view .package-card .stats .star-box .star-button {
+  padding: 0 6px;
+}
+.settings-view .package-card .stats .star-box .star-button .octicon {
+  margin-right: 0px;
+}
+.settings-view .package-card .body .css-truncate-target {
+  max-width: 100%;
+}
+.settings-view .package-card .package-description {
+  white-space: normal;
+  line-height: 1.4;
+}
+.settings-view .package-card .meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  width: 100%;
+}
+.settings-view .package-card .meta a.linked-octicon {
+  text-decoration: none;
+}
+.settings-view .package-card .meta a.linked-octicon:hover .octicon {
+  color: $greenDark;
+}
+.settings-view .package-card .meta a.linked-octicon:hover .value {
+  color: $greenDark;
+}
+.settings-view .package-card .meta .action {
+  border-radius: 3px;
+  padding: 3px 6px;
+}
+.settings-view .package-card .meta .action:hover {
+  background-color: #eaeaea;
+}
+.settings-view .package-card .meta .value {
+  color: #999;
+}
+.settings-view .package-card .meta-user {
+  flex: 1 0 auto;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+.settings-view .package-card .meta-user .avatar {
+  border-radius: 3px;
+  height: 24px;
+  width: 24px;
+  display: inline-block;
+  vertical-align: middle;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.settings-view .package-card .meta-user .author {
+  color: rgba(157, 165, 180, 0.6);
+  margin-left: 10px;
+}
+.settings-view .package-card .meta-user .author:focus {
+  outline: none;
+}
+.settings-view .package-card .meta-controls {
+  margin-top: 5px;
+}
+.settings-view .package-card .meta-controls .install-button.is-installing,
+.settings-view .package-card .meta-controls .uninstall-button.is-uninstalling {
+  opacity: 1;
+  background-image: linear-gradient(to right, transparent 50%, rgba(0, 0, 0, 0.15) 50%);
+  background-size: 10px 100%;
+  -webkit-animation: available-package-is-installing 0.5s linear infinite;
+}
+.settings-view .package-card .meta-controls .status-indicator {
+  padding: 0;
+  width: 5px;
+  min-width: 4px;
+  pointer-events: none;
+  transition: background .4s;
+  background: #2ba143;
+}
+.settings-view .package-card .meta-controls .status-indicator.is-disabled {
+  background: #ad7c0b;
+}
+.settings-view .package-card .meta-controls .btn-toolbar > .btn-group {
+  float: left;
+  margin: 5px 0 0 5px;
+}
+.settings-view .package-card .meta-lower {
+  padding: 13px;
+  background-color: #1b1d23;
+  line-height: 1;
+}
+.settings-view .package-card.blank-slate {
+  text-align: center;
+  color: $beigeDark;
+  height: 132px;
+  line-height: 132px;
+}
+.settings-view .package-detail .package-card {
+  cursor: default;
+}
+.settings-view .package-detail .package-card:hover {
+  background-color: #333842;
+}
+.settings-view .package-detail .package-card.disabled {
+  background-color: #2c313a;
+}
+@-webkit-keyframes available-package-is-installing {
+  100% {
+    background-position: -10px 0px;
+  }
+}

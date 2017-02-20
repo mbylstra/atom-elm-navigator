@@ -1,0 +1,282 @@
+<head>
+	<meta charset="UTF-8">
+	<title>app</title>
+	<link type="text/css" href="css/atom.css" rel="stylesheet">
+	<link type="text/css" href="css/one-dark-ui.css" rel="stylesheet">
+	<link type="text/css" href="css/atom-settings-view.css" rel="stylesheet">
+	<link type="text/css" href="css/package-card.css" rel="stylesheet">
+	<link type="text/css" href="css/dev.css" rel="stylesheet">
+	<link type="text/css" href="css/main.css" rel="stylesheet">
+	<script src="elm.js"></script>
+</head>
+<body>
+  <div class="dev-right-panel">
+    <div id="holder" class="elm-navigator">
+    </div>
+  </div>
+  <script type="text/javascript">
+    var element = document.getElementById('holder');
+    // var contents =
+    //   "someFunc\t/home/code/SomeModule.elm\tsomeFunc : Int -> Bool\tfunction\tline:9\n"
+    //   + "someFunc1\t/home/code/SomeModule2.elm\tsomeFunc2 : Int -> Bool\tfunction\tline:9\n"
+    //   + "someFunc2\t/home/code/SomeModule2.elm\tsomeFunc2 : Int -> Bool\tfunction\tline:9\n"
+    //   + "someFunc3\t/home/code/SomeModule2.elm\tsomeFunc2 : Int -> Bool\tfunction\tline:9\n"
+    //   + "someConstant\t/home/code/SomeModule2.elm\tsomeConstant : String\tconstant\tline:3\n"
+    //   + "someFunc4\t/home/code/SomeModule3.elm\tsomeFunc2 : Int -> Bool\tfunction\tline:9\n"
+    //   + "someFunc5\t/home/code/SomeModule3.elm\tsomeFunc2 : Int -> Bool\tfunction\tline:9\n"
+    //   + "someFunc6\t/home/code/SomeModule3.elm\tsomeFunc2 : Int -> Bool\tfunction\tline:9\n"
+    //   + "someConstant2\t/home/code/SomeModule3.elm\tsomeConstant : String\tconstant\tline:3\n"
+
+    const flags = [
+      {
+        type_: "Type",
+        context: "someFunc : Int -> Bool",
+        filePath: "/home/code/SomeModule.elm",
+        lineNumber: 9,
+        symbol: "Msg",
+      },
+      {
+        type_: "TypeAlias",
+        context: "someFunc : Int -> Bool",
+        filePath: "/home/code/SomeModule.elm",
+        lineNumber: 9,
+        symbol: "Model",
+      },
+      {
+        type_: "Function",
+        context: "someFunc : Int -> Bool",
+        filePath: "/home/code/SomeModule.elm",
+        lineNumber: 9,
+        symbol: "init",
+      },
+      {
+        type_: "Function",
+        context: "someFunc : Int -> Bool",
+        filePath: "/home/code/SomeModule.elm",
+        lineNumber: 9,
+        symbol: "initHelper",
+      },
+      {
+        type_: "Function",
+        context: "someFunc : Int -> Bool",
+        filePath: "/home/code/SomeModule.elm",
+        lineNumber: 9,
+        symbol: "update",
+      },
+      {
+        type_: "Function",
+        context: "someFunc : Int -> Bool",
+        filePath: "/home/code/SomeModule.elm",
+        lineNumber: 9,
+        symbol: "upateHelper",
+      },
+      {
+        type_: "Function",
+        context: "someFunc : Int -> Bool",
+        filePath: "/home/code/SomeModule.elm",
+        lineNumber: 9,
+        symbol: "view",
+      },
+      {
+        type_: "Function",
+        context: "someFunc : Int -> Bool",
+        filePath: "/home/code/SomeModule.elm",
+        lineNumber: 9,
+        symbol: "itemView",
+      },
+      {
+        type_: "TypeAlias",
+        context: "someFunc : Int -> Bool",
+        filePath: "/home/code/SomeModule.elm",
+        lineNumber: 9,
+        symbol: "SomeTypeAlias",
+      },
+      {
+        type_: "Port",
+        context: "someFunc : Int -> Bool",
+        filePath: "/home/code/BSomeModule2.elm",
+        lineNumber: 9,
+        symbol: "somePort",
+      },
+      {
+        type_: "Constant",
+        context: "someFunc : Int -> Bool",
+        filePath: "/home/code/BSomeModule2.elm",
+        lineNumber: 9,
+        symbol: "someConstant",
+      },
+      {
+        type_: "Constant",
+        context: "someFunc : Int -> Bool",
+        filePath: "/home/code/BSomeModule2.elm",
+        lineNumber: 9,
+        symbol: "Loooooooooooooooooooooooooooooooooooooooooong",
+      },
+      {
+        type_: "Constant",
+        context: "someFunc : Int -> Bool",
+        filePath: "/home/code/BSomeModule2.elm",
+        lineNumber: 9,
+        symbol: "Loooooooooooooooooooooooooooooooooooooooooong2",
+      },
+      {
+        type_: "Constant",
+        context: "someFunc : Int -> Bool",
+        filePath: "/home/code/BSomeModule2.elm",
+        lineNumber: 9,
+        symbol: "Loooooooooooooooooooooooooooooooooooooooooong3",
+      },
+      {
+        type_: "Constant",
+        context: "someFunc : Int -> Bool",
+        filePath: "/home/code/BSomeModule2.elm",
+        lineNumber: 9,
+        symbol: "Loooooooooooooooooooooooooooooooooooooooooong4",
+      },
+      {
+        type_: "Constant",
+        context: "someFunc : Int -> Bool",
+        filePath: "/home/code/BSomeModule2.elm",
+        lineNumber: 9,
+        symbol: "Loooooooooooooooooooooooooooooooooooooooooong5",
+      },
+      {
+        type_: "Constant",
+        context: "someFunc : Int -> Bool",
+        filePath: "/home/code/BSomeModule2.elm",
+        lineNumber: 9,
+        symbol: "Loooooooooooooooooooooooooooooooooooooooooong6",
+      },
+      {
+        type_: "Constant",
+        context: "someFunc : Int -> Bool",
+        filePath: "/home/code/BSomeModule2.elm",
+        lineNumber: 9,
+        symbol: "Loooooooooooooooooooooooooooooooooooooooooong7",
+      },
+      {
+        type_: "Constant",
+        context: "someFunc : Int -> Bool",
+        filePath: "/home/code/BSomeModule2.elm",
+        lineNumber: 9,
+        symbol: "Loooooooooooooooooooooooooooooooooooooooooong8",
+      },
+      {
+        type_: "Constant",
+        context: "someFunc : Int -> Bool",
+        filePath: "/home/code/BSomeModule2.elm",
+        lineNumber: 9,
+        symbol: "Loooooooooooooooooooooooooooooooooooooooooong9",
+      },
+      {
+        type_: "Constant",
+        context: "someFunc : Int -> Bool",
+        filePath: "/home/code/BSomeModule2.elm",
+        lineNumber: 9,
+        symbol: "Loooooooooooooooooooooooooooooooooooooooooong10",
+      },
+      {
+        type_: "Constant",
+        context: "someFunc : Int -> Bool",
+        filePath: "/home/code/BSomeModule2.elm",
+        lineNumber: 9,
+        symbol: "Loooooooooooooooooooooooooooooooooooooooooong11",
+      },
+      {
+        type_: "Constant",
+        context: "someFunc : Int -> Bool",
+        filePath: "/home/code/BSomeModule2.elm",
+        lineNumber: 9,
+        symbol: "Loooooooooooooooooooooooooooooooooooooooooong12",
+      },
+      {
+        type_: "Constant",
+        context: "someFunc : Int -> Bool",
+        filePath: "/home/code/BSomeModule2.elm",
+        lineNumber: 9,
+        symbol: "Loooooooooooooooooooooooooooooooooooooooooong13",
+      },
+      {
+        type_: "Constant",
+        context: "someFunc : Int -> Bool",
+        filePath: "/home/code/BSomeModule2.elm",
+        lineNumber: 9,
+        symbol: "Loooooooooooooooooooooooooooooooooooooooooong14",
+      },
+      {
+        type_: "Constant",
+        context: "someFunc : Int -> Bool",
+        filePath: "/home/code/BSomeModule2.elm",
+        lineNumber: 9,
+        symbol: "Loooooooooooooooooooooooooooooooooooooooooong15",
+      },
+      {
+        type_: "Constant",
+        context: "someFunc : Int -> Bool",
+        filePath: "/home/code/BSomeModule2.elm",
+        lineNumber: 9,
+        symbol: "Loooooooooooooooooooooooooooooooooooooooooong16",
+      },
+      {
+        type_: "Constant",
+        context: "someFunc : Int -> Bool",
+        filePath: "/home/code/BSomeModule2.elm",
+        lineNumber: 9,
+        symbol: "Loooooooooooooooooooooooooooooooooooooooooong17",
+      },
+      {
+        type_: "Constant",
+        context: "someFunc : Int -> Bool",
+        filePath: "/home/code/BSomeModule2.elm",
+        lineNumber: 9,
+        symbol: "Loooooooooooooooooooooooooooooooooooooooooong18",
+      },
+      {
+        type_: "Constant",
+        context: "someFunc : Int -> Bool",
+        filePath: "/home/code/BSomeModule2.elm",
+        lineNumber: 9,
+        symbol: "Loooooooooooooooooooooooooooooooooooooooooong19",
+      },
+      {
+        type_: "Constant",
+        context: "someFunc : Int -> Bool",
+        filePath: "/home/code/BSomeModule2.elm",
+        lineNumber: 9,
+        symbol: "Loooooooooooooooooooooooooooooooooooooooooong20",
+      },
+      {
+        type_: "Constant",
+        context: "someFunc : Int -> Bool",
+        filePath: "/home/code/BSomeModule2.elm",
+        lineNumber: 9,
+        symbol: "Loooooooooooooooooooooooooooooooooooooooooong21",
+      },
+      {
+        type_: "Constant",
+        context: "someFunc : Int -> Bool",
+        filePath: "/home/code/BSomeModule2.elm",
+        lineNumber: 9,
+        symbol: "Loooooooooooooooooooooooooooooooooooooooooong22",
+      },
+      {
+        type_: "Constant",
+        context: "someFunc : Int -> Bool",
+        filePath: "/home/code/BSomeModule2.elm",
+        lineNumber: 9,
+        symbol: "Loooooooooooooooooooooooooooooooooooooooooong23",
+      },
+      {
+        type_: "Constant",
+        context: "someFunc : Int -> Bool",
+        filePath: "/home/code/BSomeModule2.elm",
+        lineNumber: 9,
+        symbol: "Loooooooooooooooooooooooooooooooooooooooooong24",
+      },
+    ];
+    console.log('flags');
+
+    var app = Elm.Main.embed(element, flags);
+    // var app = Elm.Main.embed(element, "testing");
+  </script>
+</body>

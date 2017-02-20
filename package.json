@@ -1,0 +1,15 @@
+{
+  "name": "elm-navigator",
+  "main": "./lib/elm-navigator",
+  "version": "1.0.0",
+  "description": "A side panel for Elm that helps you navigate to any function, type definition or port in your project.",
+  "keywords": [
+  ],
+  "repository": "https://github.com/mbylstra/atom-elm-navigator",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {
+  }
+}

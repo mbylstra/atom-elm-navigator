@@ -1,0 +1,20 @@
+
+echo "Cleaning..."
+
+mkdir -p ./built-tmp
+mkdir -p ./built
+
+echo "Gathering dependencies..."
+elm package $* install
+
+echo "Copying dev resources..."
+cp -r dev-resources/* ./built-tmp
+
+cp -r ../styles/* ./built-tmp/css
+
+echo "Compiling..."
+elm make --output ./built-tmp/elm.js $* src/Main.elm
+
+rm -r ./built/*
+cp -r ./built-tmp/* ./built
+rm -rf built-tmp

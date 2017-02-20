@@ -1,0 +1,144 @@
+
+.elm-navigator {
+    width: 220px;
+}
+
+.elm-navigator-type {
+  width: 15px;
+  height: 15px;
+  border-radius: 10px;
+  font-size: 10px;
+  color: white;
+  margin-right: 5px;
+  display: inline-block;
+  position: absolute;
+  left: 0px;
+  top: 4px;
+}
+.elm-navigator-type::before {
+  position: absolute;
+  left: 4.2px;
+  top: -4px;
+}
+
+/*elm-navigator-type-Function*/
+.elm-navigator-type-Function {
+  background-color: #60B5CC;
+}
+.elm-navigator-type-Function::before {
+  content: "F"
+}
+
+.elm-navigator-type-Constant {
+  background-color: #5A6378;
+}
+.elm-navigator-type-Constant::before {
+  content: "C"
+}
+
+.elm-navigator-type-Port {
+  background-color: #EFA500;
+}
+.elm-navigator-type-Port::before {
+  content: "P"
+}
+
+.elm-navigator-type-Type {
+  background-color: #8CD636;
+}
+.elm-navigator-type-Type::before {
+  content: "T"
+}
+
+.elm-navigator-type-TypeAlias {
+  background-color: #8CD636;
+}
+.elm-navigator-type-TypeAlias::before {
+  content: "A"
+}
+
+.elm-navigator h3 {
+  background-color: rgba(255, 255, 255, 0.12);
+  padding: 6px;
+  font-size: 11px;
+  margin: 0px;
+  color: #d8d8d8;
+}
+
+.elm-navigator .list-group {
+    margin-top: 5px;
+    padding-left: 2px;
+    padding-right: 10px;
+}
+
+.elm-navigator .list-item-wrapper {
+  display: inline-block;
+  padding-left: 19px;
+  padding-right: 16px;
+  position: relative;
+}
+
+.elm-navigator .tea-symbol {
+  border-top: 1px dashed #7d7d7d;
+  margin-top: 5px;
+  padding-top: 5px;
+}
+
+.elm-navigator .tea-symbol:first-child {
+  border-top: none;
+  margin-top: 5px;
+  padding-top: 2px;
+}
+
+.elm-navigator .tea-symbol .symbol-name {
+  font-size: 13px;
+  font-weight: 700  !important;
+}
+
+.esn-tag-type-filter-item {
+  width: 15px;
+  height: 15px;
+  border-radius: 10px;
+  font-size: 10px;
+  color: white;
+  margin-right: 5px;
+  position: relative;
+  display: inline-block;
+  opacity: 0.2;
+}
+.esn-tag-type-filter-item::before {
+  position: absolute;
+  left: 4px;
+  top: 1px;
+}
+.esn-tag-type-filter-highlighted {
+  opacity: 1;
+}
+
+.elm-navigator .input-search {
+  margin: 0px;
+  border-radius: 0px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  width: calc(100% - 6px);
+}
+
+.elm-navigator .input-search::-webkit-input-placeholder {
+   color: #999;
+}
+
+.esn-main-view {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 6px;
+}
+
+.esn-project-tags {
+  overflow-y: auto;
+  /*overflow-x: hidden;*/
+}
+
+.esn-file-tags {
+  margin-bottom: 6px;
+}

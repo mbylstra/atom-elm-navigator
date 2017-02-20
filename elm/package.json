@@ -1,0 +1,30 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch-n-build": "onchange 'src/**/*.elm' 'dev-resources/**/*' '../styles/**/*' -v -i -- ./build",
+    "start-live-server": "live-server --open=./built --watch=./built --no-browser",
+    "start": "npm-run-all --parallel watch-n-build start-live-server --port=8000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mbylstra/elm-atomist-rugs-atom-plugin.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mbylstra/elm-atomist-rugs-atom-plugin/issues"
+  },
+  "homepage": "https://github.com/mbylstra/elm-atomist-rugs-atom-plugin#readme",
+  "devDependencies": {
+    "live-server": "^1.2.0",
+    "onchange": "^3.2.1"
+  },
+  "dependencies": {
+    "octicons": "^5.0.1",
+    "pty": "0.0.0"
+  }
+}
