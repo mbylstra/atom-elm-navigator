@@ -340,10 +340,11 @@ view model =
                 , placeholder "search..."
                 ]
                 []
-              -- , tagTypeFilterView model -- currently disabled till I do more work on it
-              -- , h2 [] [ text "Current File" ]
-              -- , tagsView basePath currentFileTags -- disabled (not sure it was such a great idea)
-              -- , h2 [] [ text "Project" ]
+
+            -- , tagTypeFilterView model -- currently disabled till I do more work on it
+            -- , h2 [] [ text "Current File" ]
+            -- , tagsView basePath currentFileTags -- disabled (not sure it was such a great idea)
+            -- , h2 [] [ text "Project" ]
             , projectTagsView basePath projectTags
             ]
 

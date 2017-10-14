@@ -37,8 +37,7 @@ commonStartsWith strings =
                             )
                             ( [], [] )
                         -- now we have alist of heads and a list of tails
-                        |>
-                            (\( heads, tails ) ->
+                        |> (\( heads, tails ) ->
                                 if not <| allEqual heads then
                                     -- if any of the heads are different, we are done
                                     startsWithAcc
@@ -50,7 +49,7 @@ commonStartsWith strings =
                                         Just head ->
                                             -- commonStartsWith_ tails (startsWithAcc ++ String.fromChar head)
                                             commonStartsWith_ tails (startsWithAcc ++ String.fromChar head)
-                            )
+                           )
     in
         commonStartsWith_ strings ""
 
